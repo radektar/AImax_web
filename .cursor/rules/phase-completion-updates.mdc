@@ -19,22 +19,22 @@ Apply this rule whenever completing any of the 5 development phases outlined in 
 - Document any deviations from original plan
 - Note any additional features or changes implemented
 
-### 2. Update project-scope-context.mdc
-Always update [project-scope-context.mdc](mdc:.cursor/rules/project-scope-context.mdc) to reflect:
+### 2. Update PROJECT_SCOPE.md
+Always update [PROJECT_SCOPE.md](mdc:PROJECT_SCOPE.md) to reflect:
 - **Completed Phase:** Mark which phase was just finished
 - **Current Status:** Update development guidelines with current state
 - **Active Constraints:** Remove completed items, add new considerations
 - **Next Phase Focus:** Highlight upcoming phase requirements
 
-### 3. Update Development Guidelines Section
-Modify the "Development Guidelines" section in project-scope-context.mdc to include:
+### 3. Update Development Phases Section
+Modify the "Development Phases" section in PROJECT_SCOPE.md to include:
 - Completed phase checkmark
 - Current active phase
 - Any new technical decisions or constraints discovered
 - Updated file structure or component locations
 
-### 4. Review Always Consider Section  
-Update the "Always Consider" section with:
+### 4. Update Timeline and Status Sections
+Update relevant sections in PROJECT_SCOPE.md with:
 - New compliance requirements discovered
 - Updated branding decisions made
 - Technical constraints identified during the phase
@@ -42,17 +42,18 @@ Update the "Always Consider" section with:
 
 ## Example Update Pattern
 ```markdown
-## Development Guidelines:
-1. ✅ Follow the phased development approach outlined in PROJECT_SCOPE.md
-2. ✅ Phase 1 Complete: Template Setup & Cleanup (Completed: [DATE])
-3. 🔄 Phase 2 Active: Content Structure Implementation  
-4. Maintain healthcare-appropriate professional tone and design
-5. Focus on the three core value propositions: Easy to use, Empathetic & friendly, Reliable
+### Phase 1: Template Setup & Cleanup ✅ COMPLETED
+1. ✅ Clone Next.js SaaS Starter template
+2. ✅ Remove unnecessary features (Stripe, pricing, complex dashboards)
+3. ✅ Set up basic project structure
+4. ✅ Configure development environment
+
+**Status:** Completed on [DATE] - All deliverables achieved, build and development environment working.
 ```
 
 ## Commit Message Format
-When updating project-scope-context.mdc after phase completion, use commit format:
-"Update project context after Phase [X] completion - [brief description]"
+When updating PROJECT_SCOPE.md after phase completion, use commit format:
+"Update PROJECT_SCOPE.md after Phase [X] completion - [brief description]"
 
 ## Documentation Requirements
 - Always reference the completed phase deliverables
