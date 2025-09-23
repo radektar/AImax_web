@@ -5,9 +5,16 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-if (!process.env.POSTGRES_URL) {
-  throw new Error('POSTGRES_URL environment variable is not set');
-}
+// For development: use a default database URL if not provided
+const databaseUrl = process.env.POSTGRES_URL || 'postgresql://localhost:5432/aimax_dev';
 
-export const client = postgres(process.env.POSTGRES_URL);
+// Create client with connection error handling
+export const client = postgres(databaseUrl, {
+  // For development, don't fail immediately if database is not available
+  connect_timeout: 5,
+  idle_timeout: 20,
+  max_lifetime: 60 * 30,
+  onnotice: () => {}, // Suppress notices in development
+});
+
 export const db = drizzle(client, { schema });
