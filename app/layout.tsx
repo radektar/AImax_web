@@ -5,8 +5,8 @@ import { getUser, getTeamForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
 
 export const metadata: Metadata = {
-  title: 'Next.js SaaS Starter',
-  description: 'Get started quickly with Next.js, Postgres, and Stripe.'
+  title: 'AImax - Healthcare AI Assistant',
+  description: 'Helping with the first and the last mile of the patient! AImax provides intelligent support across the patient care journey for patients, medical personnel, and doctors.'
 };
 
 export const viewport: Viewport = {

@@ -1,0 +1,30 @@
+---
+alwaysApply: true
+description: Always reference PROJECT_SCOPE.md for project context and requirements
+---
+
+# AImax Landing Page Project Context
+
+Always reference [PROJECT_SCOPE.md](mdc:PROJECT_SCOPE.md) before starting any task in this project.
+
+## Key Project Information:
+- **Company:** AImax - Healthcare AI company
+- **Tagline:** "Helping with the first and the last mile of the patient!"
+- **Base Template:** Next.js SaaS Starter
+- **Target Audiences:** Patients, Medical Personnel, Doctors
+
+## Development Guidelines:
+1. Follow the phased development approach outlined in PROJECT_SCOPE.md
+2. Maintain healthcare-appropriate professional tone and design
+3. Focus on the three core value propositions: Easy to use, Empathetic & friendly, Reliable
+4. Remove SaaS features (Stripe, pricing, subscriptions) as specified
+5. Implement the four main landing page sections as defined
+6. Use the specified tech stack: Next.js, TypeScript, shadcn/ui, Tailwind CSS
+
+## Always Consider:
+- Healthcare industry compliance and accessibility requirements
+- The three distinct user types and their specific needs
+- AImax branding requirements (medical cross logo, red accents, minimalist design)
+- The satisfaction guarantee message: "I cannot deactivate until you are satisfied with your care"
+
+Refer to the full PROJECT_SCOPE.md document for detailed requirements, technical specifications, and implementation phases before proceeding with any development tasks.
