@@ -83,14 +83,30 @@ function Header() {
     <header className="border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <CircleIcon className="h-6 w-6 text-orange-500" />
-          <span className="ml-2 text-xl font-semibold text-gray-900">ACME</span>
+          <div className="flex items-center justify-center h-8 w-8 rounded bg-red-500 text-white mr-3">
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L12 8L18 8L18 12L12 12L12 22L6 22L6 12L0 12L0 8L6 8L6 2L12 2Z"/>
+            </svg>
+          </div>
+          <span className="text-2xl font-bold text-gray-900">AIMAX</span>
         </Link>
-        <div className="flex items-center space-x-4">
-          <Suspense fallback={<div className="h-9" />}>
-            <UserMenu />
-          </Suspense>
-        </div>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link href="#why-aimax" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+            Why AImax
+          </Link>
+          <Link href="#products" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+            Products
+          </Link>
+          <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+            About us
+          </Link>
+          <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+            Contact
+          </Link>
+          <Button className="bg-red-500 hover:bg-red-600 text-white rounded-full px-6">
+            Get Started
+          </Button>
+        </nav>
       </div>
     </header>
   );
