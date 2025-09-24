@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { use, useState, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
+import { AImaxLogo } from '@/components/ui/aimax-logo';
 import { CircleIcon, Home, LogOut } from 'lucide-react';
 import {
   DropdownMenu,
@@ -80,32 +81,24 @@ function UserMenu() {
 
 function Header() {
   return (
-    <header className="border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header className="absolute top-0 left-0 right-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <div className="flex items-center justify-center h-8 w-8 rounded bg-aimax-primary-500 text-white mr-3">
-            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L12 8L18 8L18 12L12 12L12 22L6 22L6 12L0 12L0 8L6 8L6 2L12 2Z"/>
-            </svg>
-          </div>
-          <span className="text-2xl font-bold text-aimax-dark">AIMAX</span>
+          <AImaxLogo size="lg" variant="logo" color="white" />
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#why-aimax" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
-            Why AImax
+          <Link href="#why-aimax" className="text-sm font-medium text-aimax-light hover:text-white transition-colors">
+            WHY AIMAX
           </Link>
-          <Link href="#products" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
-            Products
+          <Link href="#products" className="text-sm font-medium text-aimax-light hover:text-white transition-colors">
+            PRODUCTS
           </Link>
-          <Link href="#about" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
-            About us
+          <Link href="#about" className="text-sm font-medium text-aimax-light hover:text-white transition-colors">
+            ABOUT US
           </Link>
-          <Link href="#contact" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
-            Contact
+          <Link href="#contact" className="text-sm font-medium text-aimax-light hover:text-white transition-colors">
+            CONTACT
           </Link>
-          <Button className="bg-aimax-secondary-500 hover:bg-aimax-secondary-600 text-white rounded-full px-6">
-            Get Started
-          </Button>
         </nav>
       </div>
     </header>

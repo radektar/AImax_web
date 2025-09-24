@@ -99,8 +99,9 @@
   --radius-full: var(--radius-full);
 
   /* AImax Typography System */
-  --font-display: var(--font-orbitron);
+  --font-display: var(--font-funnel-sans);
   --font-body: var(--font-funnel-sans);
+  --font-orbitron: var(--font-orbitron);
   
   /* Typography Scale */
   --font-size-xs: 0.75rem;      /* 12px */
@@ -160,11 +161,78 @@
   }
   
   .font-display {
-    font-family: var(--font-orbitron), system-ui, sans-serif;
+    font-family: var(--font-funnel-sans), system-ui, sans-serif;
   }
   
   .font-body {
     font-family: var(--font-funnel-sans), system-ui, sans-serif;
+  }
+
+  .font-orbitron {
+    font-family: var(--font-orbitron), system-ui, sans-serif;
+  }
+
+  /* Hero Section Enhancements */
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(25, 61, 68, 0.2) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(7, 55, 126, 0.1) 100%
+    );
+  }
+
+  .text-shadow-strong {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .backdrop-blur-strong {
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 25px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive Typography Adjustments */
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    .hero-title {
+      font-size: 3.5rem;
+      line-height: 1.15;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hero-title {
+      font-size: 4.5rem;
+      line-height: 1.1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 6rem;
+      line-height: 1.05;
+    }
   }
 }
 
