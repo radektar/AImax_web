@@ -83,27 +83,27 @@ function Header() {
     <header className="border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <div className="flex items-center justify-center h-8 w-8 rounded bg-red-500 text-white mr-3">
+          <div className="flex items-center justify-center h-8 w-8 rounded bg-aimax-primary-500 text-white mr-3">
             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L12 8L18 8L18 12L12 12L12 22L6 22L6 12L0 12L0 8L6 8L6 2L12 2Z"/>
             </svg>
           </div>
-          <span className="text-2xl font-bold text-gray-900">AIMAX</span>
+          <span className="text-2xl font-bold text-aimax-dark">AIMAX</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#why-aimax" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+          <Link href="#why-aimax" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
             Why AImax
           </Link>
-          <Link href="#products" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+          <Link href="#products" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
             Products
           </Link>
-          <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+          <Link href="#about" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
             About us
           </Link>
-          <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors">
+          <Link href="#contact" className="text-sm font-medium text-aimax-gray-600 hover:text-aimax-primary-500 transition-colors">
             Contact
           </Link>
-          <Button className="bg-red-500 hover:bg-red-600 text-white rounded-full px-6">
+          <Button className="bg-aimax-secondary-500 hover:bg-aimax-secondary-600 text-white rounded-full px-6">
             Get Started
           </Button>
         </nav>

@@ -9,38 +9,38 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-8">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-red-500 text-white mr-4 animate-pulse">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-aimax-primary-500 text-white mr-4 animate-pulse">
                 <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L12 8L18 8L18 12L12 12L12 22L6 22L6 12L0 12L0 8L6 8L6 2L12 2Z"/>
                 </svg>
               </div>
               <div className="text-left">
-                <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
+                <h1 className="font-display text-4xl font-bold text-aimax-dark sm:text-5xl md:text-6xl">
                   AIMAX
                 </h1>
-                <p className="text-lg text-red-500 font-medium">Healthcare AI Assistant</p>
+                <p className="font-body text-lg text-aimax-primary-500 font-medium">Healthcare AI Assistant</p>
               </div>
             </div>
             
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl mb-6">
+            <h2 className="font-body text-3xl font-bold text-aimax-dark sm:text-4xl md:text-5xl mb-6">
               Helping with the first and the{' '}
-              <span className="text-red-500">last mile of the patient!</span>
+              <span className="text-aimax-primary-500">last mile of the patient!</span>
             </h2>
             
-            <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
+            <p className="font-body mt-6 max-w-3xl mx-auto text-xl text-aimax-gray-600 leading-relaxed">
               AImax provides intelligent, empathetic support across the entire patient care journey. 
               Our AI assistant ensures satisfaction with the promise: 
-              <span className="font-semibold text-gray-900">
+              <span className="font-semibold text-aimax-dark">
                 "I cannot deactivate until you are satisfied with your care"
               </span>
             </p>
             
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg">
+              <Button size="lg" className="font-body bg-aimax-secondary-500 hover:bg-aimax-secondary-600 text-white px-8 py-3 rounded-full text-lg">
                 Start Your Care Journey
                 <Heart className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-red-500 text-red-500 hover:bg-red-50 px-8 py-3 rounded-full text-lg">
+              <Button size="lg" variant="outline" className="font-body border-aimax-primary-500 text-aimax-primary-500 hover:bg-aimax-primary-50 px-8 py-3 rounded-full text-lg">
                 Learn More
               </Button>
             </div>

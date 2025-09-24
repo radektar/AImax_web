@@ -1,0 +1,15 @@
+---
+description: Reusable prompt templates for common tasks
+globs: []
+alwaysApply: false
+---
+
+- **Add a new feature**:
+  - "Task: Implement [feature name]. Model: [model size]. See `PROJECT_SCOPE.md`."
+
+- **Fix a bug**:
+  - "Task: Resolve [bug description]. Model: [model size]. See `PROJECT_SCOPE.md`."
+
+- **Update documentation**:
+  - "Task: Update docs for [component/module]. Model: [model size]. See `PROJECT_SCOPE.md`."
+

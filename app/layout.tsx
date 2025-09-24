@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
+import { Orbitron, Funnel_Display } from 'next/font/google';
 import { getUser, getTeamForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
 
@@ -13,7 +13,18 @@ export const viewport: Viewport = {
   maximumScale: 1
 };
 
-const manrope = Manrope({ subsets: ['latin'] });
+// AImax Typography System
+const orbitron = Orbitron({ 
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+  display: 'swap',
+});
+
+const funnelSans = Funnel_Display({ 
+  subsets: ['latin'],
+  variable: '--font-funnel-sans',
+  display: 'swap',
+});
 
 export default function RootLayout({
   children
@@ -23,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
+      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${orbitron.variable} ${funnelSans.variable}`}
     >
       <body className="min-h-[100dvh] bg-gray-50">
         <SWRConfig

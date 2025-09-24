@@ -1,0 +1,17 @@
+---
+description: Guidelines to minimize Cache Read tokens
+globs: []
+alwaysApply: true
+---
+
+- **One-task-per-thread**: Start a new chat per task or pull request. Avoid mixing topics to prevent large historical contexts from being re-read.
+- **Be explicit and scoped**: Reference exact files and lines instead of broad requests.
+  - Good: "Edit `app/layout.tsx`, update header link."
+  - Avoid: "Scan the repo and fix all issues."
+- **Minimal pasting**: Instead of pasting large code blocks, reference files or lines.
+- **Bounded context searches**: Limit searches to specific directories or files.
+- **Small-by-default model policy**: Use smaller models for general tasks; reserve larger models for complex tasks.
+- **Lean pinned rules**: Keep pinned rules concise and reference detailed documentation elsewhere.
+- **Monitor usage**: Regularly check the Cursor dashboard to identify threads or patterns with high cache reads and adjust accordingly.
+- **Team hygiene**: Keep large files (logs, assets) out of chats; store them in the repository and reference by path instead.
+
