@@ -1,5 +1,33 @@
 # AImax Landing Page Changelog
 
+## [v0.3.0] - 2025-09-24
+
+### Added - Phase 3.1 Foundation Layer
+- **Complete AImax Typography System**
+  - Google Fonts integration: Orbitron (display) and Funnel Sans (body)
+  - Typography scale from 12px to 128px with proper line heights
+  - Font weight scale (100-900) and line height variations
+- **Comprehensive Brand Color Palette**
+  - Primary: #193D44 (teal-green) with full 50-900 HSL scale
+  - Secondary: #07377E (blue) with full 50-900 HSL scale  
+  - Light: #F7F7F7, Dark: #000000, Neutral grays 50-900
+- **Design System Foundation**
+  - Consistent spacing system (4px, 8px, 16px, 24px, 32px, 48px, 64px, 96px)
+  - Complete Tailwind CSS v4 theme configuration with design tokens
+  - CSS custom properties for maintainable design system
+
+### Updated
+- Landing page hero section with new Orbitron/Funnel Sans typography
+- Navigation and buttons using AImax brand colors
+- Enhanced visual hierarchy with proper font families
+- Optimized font loading with display: 'swap'
+
+### Technical
+- Tailwind CSS v4 @theme syntax implementation
+- CSS custom properties for design tokens
+- Font optimization and performance improvements
+- Design system ready for component development
+
 ## [v0.2.0] - 2025-09-23
 
 ### Added
