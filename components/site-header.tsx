@@ -28,7 +28,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-aimax-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center" aria-label="AImax Home">
-          <AImaxLogo size="md" variant="logo" color="dark" />
+          <AImaxLogo size="md" variant="logo" color="default" />
         </Link>
         <nav className="hidden md:flex items-center gap-4">
           <NavLink href="/why-aimax" label="Why AImax" />
