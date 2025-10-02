@@ -1,5 +1,30 @@
 # AImax Landing Page Changelog
 
+## [v0.4.0] - 2025-10-02
+
+### Added - Phase 4.5 Site Pages Setup
+- New top-level pages: Why AImax (`/why-aimax`), Products (`/products`), About us (`/about`), Contact (`/contact`)
+- Legal pages placeholders: Privacy Policy (`/privacy`), Terms of Service (`/terms`)
+- Global site header and footer integrated into root layout with active nav states
+- Per-page SEO metadata for new pages
+- About page sections implemented:
+  - Founders: 1 row of cards + group photo placeholder
+  - Advisory Board: 2 rows of cards
+  - AImax in the Press: highlight cards with image/title/summary placeholders
+- Products page structured list per wireframe: subbrand block left, description right
+- Product subbrand theme tokens added to Tailwind config (`product-*` fg/bg) for easy rebranding
+
+### Updated
+- Root layout now includes global `SiteHeader` and `SiteFooter`
+- `(dashboard)` layout simplified to avoid duplicate headers
+- About page subtitle set to full container width
+- `PROJECT_SCOPE.md` updated: Phase 4 paused; new Phase 4.5 active with tasks and timeline
+
+### Technical
+- Tailwind v4 theme variables extended with product subbrand tokens
+- Navigation uses accessible `aria-current` and tokenized colors
+- Lint check passed for modified files
+
 ## [v0.3.0] - 2025-09-24
 
 ### Added - Phase 3.1 Foundation Layer

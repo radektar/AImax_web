@@ -80,6 +80,20 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
+  /* Product Subbrand Colors (theme-mapped for utility classes) */
+  --color-product-aiprime-fg: hsl(var(--product-aiprime-fg));
+  --color-product-aiprime-bg: hsl(var(--product-aiprime-bg));
+  --color-product-aiadmin-fg: hsl(var(--product-aiadmin-fg));
+  --color-product-aiadmin-bg: hsl(var(--product-aiadmin-bg));
+  --color-product-aisenior-fg: hsl(var(--product-aisenior-fg));
+  --color-product-aisenior-bg: hsl(var(--product-aisenior-bg));
+  --color-product-aikids-fg: hsl(var(--product-aikids-fg));
+  --color-product-aikids-bg: hsl(var(--product-aikids-bg));
+  --color-product-ailife-fg: hsl(var(--product-ailife-fg));
+  --color-product-ailife-bg: hsl(var(--product-ailife-bg));
+  --color-product-aipet-fg: hsl(var(--product-aipet-fg));
+  --color-product-aipet-bg: hsl(var(--product-aipet-bg));
+
   /* AImax Spacing Scale */
   --spacing-xs: var(--spacing-xs);
   --spacing-sm: var(--spacing-sm);
@@ -334,6 +348,24 @@
     --sidebar-accent-foreground: var(--aimax-primary);
     --sidebar-border: var(--aimax-gray-200);
     --sidebar-ring: var(--aimax-primary);
+
+    /* Product Subbrand Semantic Tokens (adjust here to rebrand) */
+    --product-aiprime-fg: var(--aimax-primary-600);
+    --product-aiprime-bg: var(--aimax-primary-100);
+    --product-aiadmin-fg: var(--aimax-secondary-600);
+    --product-aiadmin-bg: var(--aimax-secondary-100);
+    /* AIsenior default orange */
+    --product-aisenior-fg: 28 90% 53%;
+    --product-aisenior-bg: 28 90% 90%;
+    /* AIkids default purple */
+    --product-aikids-fg: 270 60% 50%;
+    --product-aikids-bg: 270 60% 92%;
+    /* AIlife default emerald/green */
+    --product-ailife-fg: 160 84% 35%;
+    --product-ailife-bg: 160 84% 90%;
+    /* AIpet default sky/blue */
+    --product-aipet-fg: 200 90% 45%;
+    --product-aipet-bg: 200 90% 92%;
   }
 
   .dark {

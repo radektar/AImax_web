@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from 'next';
 import { Orbitron, Funnel_Display } from 'next/font/google';
 import { getUser, getTeamForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 
 export const metadata: Metadata = {
   title: 'AImax - Healthcare AI Assistant',
@@ -36,7 +38,8 @@ export default function RootLayout({
       lang="en"
       className={`bg-white dark:bg-gray-950 text-black dark:text-white ${orbitron.variable} ${funnelSans.variable}`}
     >
-      <body className="min-h-[100dvh] bg-gray-50">
+      <body className="min-h-[100dvh] bg-gray-50 flex flex-col">
+        <SiteHeader />
         <SWRConfig
           value={{
             fallback: {
@@ -47,8 +50,9 @@ export default function RootLayout({
             }
           }}
         >
-          {children}
+          <main className="flex-1">{children}</main>
         </SWRConfig>
+        <SiteFooter />
       </body>
     </html>
   );
