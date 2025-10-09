@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Products | AImax',
@@ -6,6 +7,14 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
+  const productLogos: Record<string, string> = {
+    aiprime: '/Brands/7. AIprime logo/AIprime logo colour.png',
+    aiadmin: '/Brands/5. AIadmin logo/AIadmin logo colour.png',
+    aisenior: '/Brands/2. AIsenior logo/AIsenior logo colour.png',
+    aikids: '/Brands/4. AIkids logo/AIkids logo colour.png',
+    ailife: '/Brands/6. AIlife logo/AIlife logo colour.png',
+    aipet: '/Brands/3. AIpet logo/AIpet logo colour.png'
+  };
   const products = [
     { key: 'aiprime', name: 'AIprime', accent: 'text-product-aiprime-fg', badgeBg: 'bg-product-aiprime-bg', description: 'Core conversational healthcare AI by AImax. General triage and guidance.' },
     { key: 'aiadmin', name: 'AIadmin', accent: 'text-product-aiadmin-fg', badgeBg: 'bg-product-aiadmin-bg', description: 'Administrative assistant for scheduling, documentation, and workflow.' },
@@ -29,11 +38,17 @@ export default function ProductsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
                   {/* Left: Subbrand logo/name */}
                   <div className="flex items-center gap-4 p-6 border-b md:border-b-0 md:border-r border-aimax-gray-200">
-                    <div className={`h-14 w-14 rounded-xl ${p.badgeBg} flex items-center justify-center text-2xl font-bold text-aimax-dark`}>AI</div>
-                    <div>
-                      <h3 className={`font-display text-2xl font-semibold ${p.accent}`}>{p.name}</h3>
-                      <p className="text-xs text-aimax-gray-500">by AImax</p>
+                    <div className="relative h-10 w-40 md:h-12 md:w-48">
+                      <Image
+                        src={productLogos[p.key]}
+                        alt={`${p.name} logo`}
+                        fill
+                        className="object-contain"
+                        sizes="(min-width: 768px) 192px, 160px"
+                        priority={false}
+                      />
                     </div>
+                    {/* Name removed as logo already includes brand name */}
                   </div>
 
                   {/* Right: Description */}
