@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   const productLogos: Record<string, string> = {
-    aiprime: '/Brands/7. AIprime logo/AIprime logo colour.png',
-    aiadmin: '/Brands/5. AIadmin logo/AIadmin logo colour.png',
-    aisenior: '/Brands/2. AIsenior logo/AIsenior logo colour.png',
-    aikids: '/Brands/4. AIkids logo/AIkids logo colour.png',
-    ailife: '/Brands/6. AIlife logo/AIlife logo colour.png',
-    aipet: '/Brands/3. AIpet logo/AIpet logo colour.png'
+    aiprime: '/Brands/7. AIprime logo/AIprime logo svg/AIprime logo colour.svg',
+    aiadmin: '/Brands/5. AIadmin logo/AIadmin logo svg/AIadmin logo colour.svg',
+    aisenior: '/Brands/2. AIsenior logo/AIsenior logo svg/AIsenior logo colour.svg',
+    aikids: '/Brands/3. AIkids logo/AIkids logo svg/AIkids logo colour.svg',
+    ailife: '/Brands/6. AIlife logo/AIlife logo svg/AIlife logo colour.svg',
+    aipet: '/Brands/4. AIpet logo/AIpet logo svg/AIpet logo colour.svg'
   };
   const products = [
     { key: 'aiprime', name: 'AIprime', accent: 'text-product-aiprime-fg', badgeBg: 'bg-product-aiprime-bg', description: 'Core conversational healthcare AI by AImax. General triage and guidance.' },

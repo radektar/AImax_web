@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us | AImax',
@@ -6,6 +7,11 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const founderPhotos = [
+    { src: '/Founders/Weber, Christian 01.jpg', alt: 'Christian Weber' },
+    { src: '/Founders/fdm.jpg', alt: 'Founder 2' },
+    { src: '/Founders/DSCF5997.jpg', alt: 'Founder 3' }
+  ];
   return (
     <main className="min-h-screen">
       {/* Intro */}
@@ -28,10 +34,18 @@ export default function AboutPage() {
 
           {/* Founders Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array.from({ length: 3 }).map((_, idx) => (
+            {founderPhotos.map((photo, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-aimax-gray-200">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="size-16 rounded-full bg-aimax-primary-100 border border-aimax-primary-200" />
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={128}
+                    height={128}
+                    className="size-32 rounded-full object-cover object-center border border-aimax-primary-200"
+                    sizes="128px"
+                    priority={idx === 0}
+                  />
                   <div>
                     <p className="font-display text-xl font-semibold text-aimax-dark">Founder Name</p>
                     <p className="font-body text-sm text-aimax-gray-600">Role / Specialty</p>
@@ -42,16 +56,6 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Group Photo Placeholder */}
-          <div className="mt-10">
-            <div className="w-full h-64 rounded-2xl border-2 border-dashed border-aimax-gray-300 bg-white/50 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-14 h-14 bg-aimax-gray-200 rounded-full mx-auto mb-3" />
-                <p className="font-body text-aimax-gray-600">Group photo placeholder</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

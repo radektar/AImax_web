@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { AImaxLogo } from '@/components/ui/aimax-logo';
 import { HealthcareIcons, AImaxFeatureIcon } from '@/components/ui/aimax-icons';
 import { Heart, Users, Stethoscope, ShieldCheck, Clock, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,9 @@ export default function HomePage() {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Helping with the first and the last mile of the patient!
             </h1>
+            <p className="font-body text-lg md:text-xl text-white/90 w-full max-w-none">
+              AImax: your reliable, user-friendly, and empathetic assistant.
+            </p>
             </div>
 
             {/* Right Side - Placeholder for Future Asset */}
@@ -61,19 +65,19 @@ export default function HomePage() {
               <ul className="space-y-4 text-aimax-gray-700">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-500 mt-2 mr-4"></div>
-                  <span className="font-body">General health questions and symptom assessment</span>
+                  <span className="font-body">Healthguide</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-500 mt-2 mr-4"></div>
-                  <span className="font-body">Severity and urgency calibration of symptoms</span>
+                  <span className="font-body">24/7 easy to access</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-500 mt-2 mr-4"></div>
-                  <span className="font-body">Easy-to-use interface for health inquiries</span>
+                  <span className="font-body">Empathetic, like talking to a friend</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-500 mt-2 mr-4"></div>
-                  <span className="font-body">24/7 availability for peace of mind</span>
+                  <span className="font-body">Reliable: based on German medical guidelines and trained with German GPs</span>
                 </li>
               </ul>
             </div>
@@ -89,19 +93,19 @@ export default function HomePage() {
               <ul className="space-y-4 text-aimax-gray-700">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-secondary-500 mt-2 mr-4"></div>
-                  <span className="font-body">Administrative task assistance</span>
+                  <span className="font-body">Supports time consuming administrative tasks</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-secondary-500 mt-2 mr-4"></div>
-                  <span className="font-body">Streamlined workflow support</span>
+                  <span className="font-body">Patient admission</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-secondary-500 mt-2 mr-4"></div>
-                  <span className="font-body">Professional healthcare tools</span>
+                  <span className="font-body">Filling out questionnaires on symptoms and further anamneses</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-secondary-500 mt-2 mr-4"></div>
-                  <span className="font-body">Efficient patient communication</span>
+                  <span className="font-body">Quality metrics, PROMs</span>
                 </li>
               </ul>
             </div>
@@ -117,19 +121,11 @@ export default function HomePage() {
               <ul className="space-y-4 text-aimax-gray-700">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-600 mt-2 mr-4"></div>
-                  <span className="font-body">Diagnostic support through comprehensive cross-checking</span>
+                  <span className="font-body">More efficient patient appointments through prior assessed anamneses</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-600 mt-2 mr-4"></div>
-                  <span className="font-body">Integration with medical guidelines and literature</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-600 mt-2 mr-4"></div>
-                  <span className="font-body">Clinical decision support tools</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-2 w-2 rounded-full bg-aimax-primary-600 mt-2 mr-4"></div>
-                  <span className="font-body">Evidence-based recommendations</span>
+                  <span className="font-body">Digital 2nd opinion on suspected diagnosis</span>
                 </li>
               </ul>
             </div>
@@ -137,7 +133,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 3: Key Features & Benefits */}
+     {/* Section 3: Partners & Customers */}
+     <section id="about" className="py-20 bg-aimax-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl font-bold text-aimax-dark sm:text-4xl mb-6">
+              Trusted by Healthcare Leaders
+            </h2>
+          </div>
+          
+          <div className="flex flex-row flex-nowrap gap-6 items-center overflow-x-auto py-2">
+            {/* Partner logos - real assets */}
+            <div className="bg-white rounded-xl p-6 h-28 min-w-[180px] flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200">
+              <div className="relative h-14 w-40 md:h-16 md:w-44 lg:h-16 lg:w-48">
+                <Image src="/Partners/kize.png" alt="KiZe Maulbronn" fill className="object-contain" sizes="(min-width: 1024px) 192px, (min-width: 768px) 176px, 160px" />
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 h-28 min-w-[180px] flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200">
+              <div className="relative h-14 w-40 md:h-16 md:w-44 lg:h-16 lg:w-48">
+                <Image src="/Partners/medi_verbund.png" alt="medi Verbund" fill className="object-contain" sizes="(min-width: 1024px) 192px, (min-width: 768px) 176px, 160px" />
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 h-28 min-w-[180px] flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200">
+              <div className="relative h-14 w-40 md:h-16 md:w-44 lg:h-16 lg:w-48">
+                <Image src="/Partners/time.png" alt="time" fill className="object-contain" sizes="(min-width: 1024px) 192px, (min-width: 768px) 176px, 160px" />
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 h-28 min-w-[180px] flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200">
+              <div className="relative h-14 w-40 md:h-16 md:w-44 lg:h-16 lg:w-48">
+                <Image src="/Partners/uni_tubingen.png" alt="Uni Tübingen" fill className="object-contain" sizes="(min-width: 1024px) 192px, (min-width: 768px) 176px, 160px" />
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 h-28 min-w-[180px] flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200">
+              <div className="relative h-14 w-40 md:h-16 md:w-44 lg:h-16 lg:w-48">
+                <Image src="/Partners/Kreisklinikien.png" alt="Kreisklinikien" fill className="object-contain" sizes="(min-width: 1024px) 192px, (min-width: 768px) 176px, 160px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Key Features & Benefits */}
       <section id="products" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -237,72 +273,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 4: Partners & Customers */}
-      <section id="about" className="py-20 bg-aimax-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold text-aimax-dark sm:text-4xl mb-6">
-              Trusted by Healthcare Leaders
-            </h2>
-            <p className="font-body text-xl text-aimax-gray-600 mx-auto leading-relaxed">
-              AImax partners with leading healthcare organizations to deliver exceptional patient care
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
-            {/* Partner logos - AImax branded styling */}
-            <div className="bg-white rounded-xl p-8 w-full h-28 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200 group">
-              <span className="text-2xl font-bold text-aimax-gray-500 group-hover:text-aimax-primary-500 transition-colors duration-300 font-body">KiZe Maulbronn</span>
-            </div>
-            <div className="bg-white rounded-xl p-8 w-full h-28 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200 group">
-              <span className="text-2xl font-bold text-aimax-gray-500 group-hover:text-aimax-primary-500 transition-colors duration-300 font-body">medi</span>
-            </div>
-            <div className="bg-white rounded-xl p-8 w-full h-28 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 border border-aimax-gray-200 group">
-              <span className="text-2xl font-bold text-aimax-gray-500 group-hover:text-aimax-primary-500 transition-colors duration-300 font-body">time</span>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button variant="outline" shape="rounded" className="border-aimax-primary-500 text-aimax-primary-500 hover:bg-aimax-primary-50 font-body">
-              View All Partners
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Contact/CTA Section */}
       <section id="contact" className="py-20 bg-aimax-primary-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center mb-8">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-aimax-primary-500 text-white shadow-lg">
-              <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L12 8L18 8L18 12L12 12L12 22L6 22L6 12L0 12L0 8L6 8L6 2L12 2Z"/>
-              </svg>
-            </div>
-          </div>
-          
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">         
           <h2 className="font-display text-3xl font-bold text-aimax-dark sm:text-4xl lg:text-5xl mb-8">
             Ready to Transform Healthcare?
           </h2>
           
-          <p className="font-body text-xl text-aimax-gray-600 mb-12 mx-auto leading-relaxed">
+          <p className="font-body text-xl text-aimax-gray-600 mb-8 mx-4 leading-relaxed">
             Join thousands of patients, medical personnel, and doctors who trust AImax 
             for their healthcare journey. Experience the difference of truly empathetic AI.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Button variant="primary" size="xl" shape="rounded" className="font-body">
-              Get Started Today
-              <Heart className="h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="xl" shape="rounded" className="border-aimax-primary-500 text-aimax-primary-500 hover:bg-aimax-primary-100 font-body">
               Contact Our Team
             </Button>
           </div>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-aimax-primary-200 mx-auto">
             <p className="font-body text-xl text-aimax-dark font-semibold italic leading-relaxed mb-3">
-              "I cannot deactivate until you are satisfied with your care"
+              "I can only de-activate if you say that you are satisfied with my care."
             </p>
             <p className="text-aimax-primary-500 text-base font-medium">— Your AImax Promise</p>
           </div>
