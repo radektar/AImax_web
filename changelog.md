@@ -1,5 +1,21 @@
 # AImax Landing Page Changelog
 
+## [v0.4.1] - 2025-10-17
+
+### Updated - Contact Form & Hero Screen Improvements
+- Contact form layout redesigned to use more browser space with responsive grid layout
+- Contact form enhanced with larger form elements, better spacing, and professional card design
+- Contact form subtitle text width optimized to prevent awkward line breaks
+- Hero screen height adjusted from full viewport to 70% for better scroll indication
+- AImax signet.svg integrated into hero screen right column with white color styling
+- Signet size increased to 320x320px for better visual impact
+- Removed placeholder container styling for cleaner hero presentation
+
+### Technical
+- Responsive design improvements for better space utilization across screen sizes
+- Enhanced visual hierarchy with proper form element sizing and spacing
+- Improved user experience with clear scroll indication on large monitors
+
 ## [v0.4.0] - 2025-10-02
 
 ### Added - Phase 4.5 Site Pages Setup

@@ -8,9 +8,9 @@ export default function HomePage() {
   return (
     <main>
       {/* Section 1: Hero/Main Value Proposition */}
-      <section className="min-h-screen bg-gradient-to-br from-aimax-primary-500 to-aimax-secondary-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+      <section className="h-[70vh] bg-gradient-to-br from-aimax-primary-500 to-aimax-secondary-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
             
             {/* Left Side - Main Content */}
             <div className="space-y-8">
@@ -22,19 +22,11 @@ export default function HomePage() {
             </p>
             </div>
 
-            {/* Right Side - Placeholder for Future Asset */}
+            {/* Right Side - AImax Signet */}
             <div className="flex items-center justify-center">
-              <div className="w-full max-w-lg h-96 bg-white/10 rounded-2xl border-2 border-dashed border-white/30 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-white/60 text-lg font-medium">Asset Placeholder</p>
-                  <p className="text-white/40 text-sm mt-2">Chat interface will be added here</p>
-                </div>
-              </div>
+              <svg width="320" height="320" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M33.5498 13.5498H28.4502V8.45016C28.4502 4.34309 25.1071 1 21 1C16.8929 1 13.5498 4.34309 13.5498 8.45016V13.5498H8.45016C4.34309 13.5498 1 16.8929 1 21C1 25.1071 4.34309 28.4502 8.45016 28.4502H13.5498V33.5498C13.5498 37.6569 16.8929 41 21 41C25.1071 41 28.4502 37.6569 28.4502 33.5498V28.4502H33.5498C37.6569 28.4502 41 25.1071 41 21C41 16.8929 37.6569 13.5498 33.5498 13.5498ZM8.45295 26.0969C5.63683 26.0969 3.35606 23.8133 3.35606 21C3.35606 18.1867 5.63962 15.9031 8.45295 15.9031H13.5526V26.0997H8.45295V26.0969ZM26.0997 33.547C26.0997 36.3632 23.8161 38.6439 21.0028 38.6439C18.1867 38.6439 15.9059 36.3604 15.9059 33.547V28.4474L22.5 28.4502V26.0997L15.9059 26.0969V8.45016C15.9059 5.63404 18.1895 3.35327 21.0028 3.35327C23.8189 3.35327 26.0997 5.63683 26.0997 8.45016V15.5741C24.7753 14.3305 22.9992 13.561 21.0446 13.5498H19.5V15.9031H21.0446C23.8412 15.9282 26.0997 18.2006 26.0997 21V33.5498V33.547ZM33.5498 26.0969H28.4502V21C28.4502 19.0287 27.6778 17.2359 26.4259 15.9031H33.5498C36.366 15.9031 38.6467 18.1867 38.6467 21C38.6467 23.8133 36.3632 26.0969 33.5498 26.0969Z" fill="white" stroke="white"/>
+              </svg>
             </div>
 
           </div>

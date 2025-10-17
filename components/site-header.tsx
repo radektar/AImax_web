@@ -43,6 +43,7 @@ export function SiteHeader() {
           <NavLink href="/why-aimax" label="Why AImax" />
           <NavLink href="/products" label="Products" />
           <NavLink href="/about" label="About us" />
+          <NavLink href="/careers" label="Careers" />
           <NavLink href="/contact" label="Contact" />
         </nav>
       </div>

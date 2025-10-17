@@ -16,12 +16,12 @@ export default function ProductsPage() {
     aipet: '/Brands/4. AIpet logo/AIpet logo svg/AIpet logo colour.svg'
   };
   const products = [
-    { key: 'aiprime', name: 'AIprime', accent: 'text-product-aiprime-fg', badgeBg: 'bg-product-aiprime-bg', description: 'Core conversational healthcare AI by AImax. General triage and guidance.' },
-    { key: 'aiadmin', name: 'AIadmin', accent: 'text-product-aiadmin-fg', badgeBg: 'bg-product-aiadmin-bg', description: 'Administrative assistant for scheduling, documentation, and workflow.' },
-    { key: 'aisenior', name: 'AIsenior', accent: 'text-product-aisenior-fg', badgeBg: 'bg-product-aisenior-bg', description: 'Tailored support for seniors: medication, reminders, caregiver coordination.' },
-    { key: 'aikids', name: 'AIkids', accent: 'text-product-aikids-fg', badgeBg: 'bg-product-aikids-bg', description: 'Kid-friendly guidance for parents and pediatric contexts.' },
-    { key: 'ailife', name: 'AIlife', accent: 'text-product-ailife-fg', badgeBg: 'bg-product-ailife-bg', description: 'Lifestyle and wellness companion focused on prevention.' },
-    { key: 'aipet', name: 'AIpet', accent: 'text-product-aipet-fg', badgeBg: 'bg-product-aipet-bg', description: 'Veterinary-focused assistant for pet health inquiries.' }
+    { key: 'aiprime', name: 'AIprime', accent: 'text-product-aiprime-fg', badgeBg: 'bg-product-aiprime-bg', description: 'Core conversational healthcare AI by AImax. General triage and guidance.', available: true },
+    { key: 'aiadmin', name: 'AIadmin', accent: 'text-product-aiadmin-fg', badgeBg: 'bg-product-aiadmin-bg', description: 'Administrative assistant for scheduling, documentation, and workflow.', available: true },
+    { key: 'aisenior', name: 'AIsenior', accent: 'text-product-aisenior-fg', badgeBg: 'bg-product-aisenior-bg', description: 'Tailored support for seniors: medication, reminders, caregiver coordination.', available: false },
+    { key: 'aikids', name: 'AIkids', accent: 'text-product-aikids-fg', badgeBg: 'bg-product-aikids-bg', description: 'Kid-friendly guidance for parents and pediatric contexts.', available: false },
+    { key: 'ailife', name: 'AIlife', accent: 'text-product-ailife-fg', badgeBg: 'bg-product-ailife-bg', description: 'Lifestyle and wellness companion focused on prevention.', available: false },
+    { key: 'aipet', name: 'AIpet', accent: 'text-product-aipet-fg', badgeBg: 'bg-product-aipet-bg', description: 'Veterinary-focused assistant for pet health inquiries.', available: false }
   ];
   return (
     <main className="min-h-screen">
@@ -34,7 +34,12 @@ export default function ProductsPage() {
 
           <div className="grid grid-cols-1 gap-6">
             {products.map((p) => (
-              <article key={p.key} className="rounded-2xl border border-aimax-gray-200 bg-white shadow-sm overflow-hidden">
+              <article key={p.key} className={`rounded-2xl border border-aimax-gray-200 bg-white shadow-sm overflow-hidden relative ${!p.available ? 'opacity-60' : ''}`}>
+                {!p.available && (
+                  <div className="absolute top-4 right-4 z-10 bg-white border border-aimax-red text-aimax-red text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                    Coming Soon
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
                   {/* Left: Subbrand logo/name */}
                   <div className="flex items-center gap-4 p-6 border-b md:border-b-0 md:border-r border-aimax-gray-200">
