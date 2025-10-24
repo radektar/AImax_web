@@ -9,31 +9,37 @@
 @variant dark (&:is(.dark *));
 
 @theme {
-  /* AImax Brand Color Utilities */
-  --color-aimax-primary-50: hsl(var(--aimax-primary-50));
-  --color-aimax-primary-100: hsl(var(--aimax-primary-100));
-  --color-aimax-primary-200: hsl(var(--aimax-primary-200));
-  --color-aimax-primary-300: hsl(var(--aimax-primary-300));
-  --color-aimax-primary-400: hsl(var(--aimax-primary-400));
-  --color-aimax-primary-500: hsl(var(--aimax-primary-500));
-  --color-aimax-primary-600: hsl(var(--aimax-primary-600));
-  --color-aimax-primary-700: hsl(var(--aimax-primary-700));
-  --color-aimax-primary-800: hsl(var(--aimax-primary-800));
-  --color-aimax-primary-900: hsl(var(--aimax-primary-900));
+  /* Next.js Design System Color Utilities */
+  --color-green-0: hsl(var(--green-0));
+  --color-green-100: hsl(var(--green-100));
+  --color-green-200: hsl(var(--green-200));
+  --color-green-300: hsl(var(--green-300));
+  --color-green-400: hsl(var(--green-400));
+  --color-green-500: hsl(var(--green-500));
+  --color-green-600: hsl(var(--green-600));
+  --color-green-700: hsl(var(--green-700));
+  --color-green-800: hsl(var(--green-800));
+  --color-green-900: hsl(var(--green-900));
 
-  --color-aimax-secondary-50: hsl(var(--aimax-secondary-50));
-  --color-aimax-secondary-100: hsl(var(--aimax-secondary-100));
-  --color-aimax-secondary-200: hsl(var(--aimax-secondary-200));
-  --color-aimax-secondary-300: hsl(var(--aimax-secondary-300));
-  --color-aimax-secondary-400: hsl(var(--aimax-secondary-400));
-  --color-aimax-secondary-500: hsl(var(--aimax-secondary-500));
-  --color-aimax-secondary-600: hsl(var(--aimax-secondary-600));
-  --color-aimax-secondary-700: hsl(var(--aimax-secondary-700));
-  --color-aimax-secondary-800: hsl(var(--aimax-secondary-800));
-  --color-aimax-secondary-900: hsl(var(--aimax-secondary-900));
+  --color-blue-0: hsl(var(--blue-0));
+  --color-blue-100: hsl(var(--blue-100));
+  --color-blue-200: hsl(var(--blue-200));
+  --color-blue-300: hsl(var(--blue-300));
+  --color-blue-400: hsl(var(--blue-400));
+  --color-blue-500: hsl(var(--blue-500));
+  --color-blue-600: hsl(var(--blue-600));
+  --color-blue-700: hsl(var(--blue-700));
+  --color-blue-800: hsl(var(--blue-800));
+  --color-blue-900: hsl(var(--blue-900));
 
-  --color-aimax-light: hsl(var(--aimax-light));
-  --color-aimax-dark: hsl(var(--aimax-dark));
+  --color-background-light: hsl(var(--background-light));
+  --color-background-dark: hsl(var(--background-dark));
+
+  --color-accent-violet: hsl(var(--accent-violet));
+  --color-accent-violet-light: hsl(var(--accent-violet-light));
+  --color-accent-violet-dark: hsl(var(--accent-violet-dark));
+
+  /* Legacy AImax Brand Color Utilities (for compatibility) */
 
   --color-aimax-gray-50: hsl(var(--aimax-gray-50));
   --color-aimax-gray-100: hsl(var(--aimax-gray-100));
@@ -114,8 +120,11 @@
 
   /* AImax Typography System */
   --font-display: var(--font-funnel-sans);
-  --font-body: var(--font-funnel-sans);
+  --font-body: var(--font-dm-sans);
+  --font-accent: var(--font-dm-sans);
   --font-orbitron: var(--font-orbitron);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-dm-sans: var(--font-dm-sans);
   
   /* Typography Scale */
   --font-size-xs: 0.75rem;      /* 12px */
@@ -171,7 +180,7 @@
 @layer utilities {
   /* AImax Typography System */
   body {
-    font-family: var(--font-funnel-sans), system-ui, sans-serif;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
   }
   
   .font-display {
@@ -179,11 +188,24 @@
   }
   
   .font-body {
-    font-family: var(--font-funnel-sans), system-ui, sans-serif;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
   }
 
   .font-orbitron {
     font-family: var(--font-orbitron), system-ui, sans-serif;
+  }
+
+  .font-accent {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-weight: 700; /* Bold weight for accent headings */
+  }
+
+  .font-space-grotesk {
+    font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  }
+
+  .font-dm-sans {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
   }
 
   /* Hero Section Enhancements */
@@ -193,6 +215,15 @@
       rgba(25, 61, 68, 0.2) 0%,
       rgba(0, 0, 0, 0.1) 50%,
       rgba(7, 55, 126, 0.1) 100%
+    );
+  }
+
+  .hero-background-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(25, 61, 68, 0.8) 0%,
+      rgba(25, 61, 68, 0.7) 50%,
+      rgba(7, 55, 126, 0.8) 100%
     );
   }
 
@@ -226,12 +257,22 @@
       font-size: 2.5rem;
       line-height: 1.2;
     }
+    
+    .hero-signet {
+      width: 200px;
+      height: 200px;
+    }
   }
 
   @media (min-width: 641px) and (max-width: 768px) {
     .hero-title {
       font-size: 3.5rem;
       line-height: 1.15;
+    }
+    
+    .hero-signet {
+      width: 240px;
+      height: 240px;
     }
   }
 
@@ -240,6 +281,11 @@
       font-size: 4.5rem;
       line-height: 1.1;
     }
+    
+    .hero-signet {
+      width: 280px;
+      height: 280px;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -247,38 +293,69 @@
       font-size: 6rem;
       line-height: 1.05;
     }
+    
+    .hero-signet {
+      width: 320px;
+      height: 320px;
+    }
+  }
+
+  /* Hero Section Responsive Enhancements */
+  @media (max-width: 768px) {
+    .hero-content {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hero-content {
+      text-align: left;
+    }
   }
 }
 
 @layer base {
   :root {
-    /* AImax Brand Colors */
-    --aimax-primary: 194 45% 18%;        /* #193D44 - Primary teal-green */
-    --aimax-primary-50: 194 45% 95%;     /* Very light teal */
-    --aimax-primary-100: 194 45% 88%;    /* Light teal */
-    --aimax-primary-200: 194 45% 78%;    /* Medium light teal */
-    --aimax-primary-300: 194 45% 65%;    /* Medium teal */
-    --aimax-primary-400: 194 45% 45%;    /* Medium dark teal */
-    --aimax-primary-500: 194 45% 18%;    /* Brand primary #193D44 */
-    --aimax-primary-600: 194 45% 15%;    /* Darker teal */
-    --aimax-primary-700: 194 45% 12%;    /* Very dark teal */
-    --aimax-primary-800: 194 45% 8%;     /* Almost black teal */
-    --aimax-primary-900: 194 45% 5%;     /* Darkest teal */
+    /* Next.js Design System Colors from Figma */
+    
+    /* Green Color Palette */
+    --green-0: 195 100% 97%;            /* #EBFCFF - Lightest green */
+    --green-100: 195 100% 90%;           /* #B8F3FD - Light green */
+    --green-200: 195 100% 80%;           /* Generated intermediate */
+    --green-300: 195 100% 70%;           /* Generated intermediate */
+    --green-400: 195 100% 60%;           /* Generated intermediate */
+    --green-500: 195 100% 50%;           /* #26C6E2 - Primary green */
+    --green-600: 195 100% 40%;           /* Generated intermediate */
+    --green-700: 195 100% 30%;           /* Generated intermediate */
+    --green-800: 195 100% 20%;           /* Generated intermediate */
+    --green-900: 195 100% 10%;           /* Darkest green */
 
-    --aimax-secondary: 218 91% 26%;      /* #07377E - Secondary blue */
-    --aimax-secondary-50: 218 91% 95%;   /* Very light blue */
-    --aimax-secondary-100: 218 91% 88%;  /* Light blue */
-    --aimax-secondary-200: 218 91% 78%;  /* Medium light blue */
-    --aimax-secondary-300: 218 91% 65%;  /* Medium blue */
-    --aimax-secondary-400: 218 91% 45%;  /* Medium dark blue */
-    --aimax-secondary-500: 218 91% 26%;  /* Brand secondary #07377E */
-    --aimax-secondary-600: 218 91% 22%;  /* Darker blue */
-    --aimax-secondary-700: 218 91% 18%;  /* Very dark blue */
-    --aimax-secondary-800: 218 91% 14%;  /* Almost black blue */
-    --aimax-secondary-900: 218 91% 10%;  /* Darkest blue */
+    /* Blue Color Palette */
+    --blue-0: 220 100% 95%;              /* #BAD6FF - Lightest blue */
+    --blue-100: 220 100% 85%;            /* #96BEFA - Light blue */
+    --blue-200: 220 100% 75%;            /* Generated intermediate */
+    --blue-300: 220 100% 65%;            /* Generated intermediate */
+    --blue-400: 220 100% 55%;            /* Generated intermediate */
+    --blue-500: 220 100% 45%;            /* #2760B6 - Primary blue */
+    --blue-600: 220 100% 35%;            /* Generated intermediate */
+    --blue-700: 220 100% 25%;            /* Generated intermediate */
+    --blue-800: 220 100% 15%;            /* Generated intermediate */
+    --blue-900: 220 100% 10%;            /* Darkest blue */
 
-    --aimax-light: 0 0% 97%;             /* #F7F7F7 - Light gray */
-    --aimax-dark: 0 0% 0%;               /* #000000 - Pure black */
+    /* Background Colors */
+    --background-light: 0 0% 97%;        /* #F7F7F7 - Light background */
+    --background-dark: 0 0% 0%;          /* #000000 - Dark background */
+
+    /* Accent Colors */
+    --accent-violet: 270 100% 75%;       /* #BE87FE - Violet accent */
+    --accent-violet-light: 270 100% 90%; /* Generated light variant */
+    --accent-violet-dark: 270 100% 60%;  /* Generated dark variant */
+
+    /* Legacy AImax Colors (keeping for compatibility) */
+    --aimax-primary: var(--green-500);    /* Map to new green */
+    --aimax-secondary: var(--blue-500);  /* Map to new blue */
+    --aimax-light: var(--background-light);
+    --aimax-dark: var(--background-dark);
 
     /* Neutral grays for text and UI elements */
     --aimax-gray-50: 0 0% 98%;           /* Almost white */
@@ -292,26 +369,26 @@
     --aimax-gray-800: 0 0% 15%;          /* Almost black gray */
     --aimax-gray-900: 0 0% 9%;           /* Darkest gray */
 
-    /* System colors mapped to AImax brand */
-    --background: var(--aimax-light);
-    --foreground: var(--aimax-dark);
+    /* System colors mapped to Next.js design system */
+    --background: var(--background-light);
+    --foreground: var(--background-dark);
     --card: 0 0% 100%;
-    --card-foreground: var(--aimax-dark);
+    --card-foreground: var(--background-dark);
     --popover: 0 0% 100%;
-    --popover-foreground: var(--aimax-dark);
-    --primary: var(--aimax-primary);
+    --popover-foreground: var(--background-dark);
+    --primary: var(--green-500);
     --primary-foreground: 0 0% 100%;
-    --secondary: var(--aimax-secondary);
+    --secondary: var(--blue-500);
     --secondary-foreground: 0 0% 100%;
     --muted: var(--aimax-gray-100);
     --muted-foreground: var(--aimax-gray-600);
-    --accent: var(--aimax-primary-50);
-    --accent-foreground: var(--aimax-primary);
+    --accent: var(--accent-violet-light);
+    --accent-foreground: var(--accent-violet-dark);
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: var(--aimax-gray-200);
     --input: var(--aimax-gray-200);
-    --ring: var(--aimax-primary);
+    --ring: var(--green-500);
 
     /* AImax Spacing Scale */
     --spacing-xs: 0.25rem;    /* 4px */
@@ -332,40 +409,40 @@
     --radius-2xl: 1.5rem;     /* 24px */
     --radius-full: 9999px;    /* Full rounded */
 
-    /* Chart colors using AImax palette */
-    --chart-1: var(--aimax-primary);
-    --chart-2: var(--aimax-secondary);
+    /* Chart colors using Next.js design system */
+    --chart-1: var(--green-500);
+    --chart-2: var(--blue-500);
     --chart-3: var(--aimax-gray-500);
-    --chart-4: var(--aimax-primary-300);
-    --chart-5: var(--aimax-secondary-300);
+    --chart-4: var(--accent-violet);
+    --chart-5: var(--green-300);
 
-    /* Sidebar colors */
-    --sidebar-background: var(--aimax-light);
-    --sidebar-foreground: var(--aimax-dark);
-    --sidebar-primary: var(--aimax-primary);
+    /* Sidebar colors using Next.js design system */
+    --sidebar-background: var(--background-light);
+    --sidebar-foreground: var(--background-dark);
+    --sidebar-primary: var(--green-500);
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: var(--aimax-primary-50);
-    --sidebar-accent-foreground: var(--aimax-primary);
+    --sidebar-accent: var(--green-0);
+    --sidebar-accent-foreground: var(--green-500);
     --sidebar-border: var(--aimax-gray-200);
-    --sidebar-ring: var(--aimax-primary);
+    --sidebar-ring: var(--green-500);
 
-    /* Product Subbrand Semantic Tokens (adjust here to rebrand) */
-    --product-aiprime-fg: var(--aimax-primary-600);
-    --product-aiprime-bg: var(--aimax-primary-100);
-    --product-aiadmin-fg: var(--aimax-secondary-600);
-    --product-aiadmin-bg: var(--aimax-secondary-100);
-    /* AIsenior default orange */
-    --product-aisenior-fg: 28 90% 53%;
-    --product-aisenior-bg: 28 90% 90%;
-    /* AIkids default purple */
-    --product-aikids-fg: 270 60% 50%;
-    --product-aikids-bg: 270 60% 92%;
-    /* AIlife default emerald/green */
-    --product-ailife-fg: 160 84% 35%;
-    --product-ailife-bg: 160 84% 90%;
-    /* AIpet default sky/blue */
-    --product-aipet-fg: 200 90% 45%;
-    --product-aipet-bg: 200 90% 92%;
+    /* Product Subbrand Semantic Tokens using Next.js design system */
+    --product-aiprime-fg: var(--green-600);
+    --product-aiprime-bg: var(--green-100);
+    --product-aiadmin-fg: var(--blue-600);
+    --product-aiadmin-bg: var(--blue-100);
+    /* AIsenior using violet accent */
+    --product-aisenior-fg: var(--accent-violet-dark);
+    --product-aisenior-bg: var(--accent-violet-light);
+    /* AIkids using blue variant */
+    --product-aikids-fg: var(--blue-700);
+    --product-aikids-bg: var(--blue-0);
+    /* AIlife using green variant */
+    --product-ailife-fg: var(--green-700);
+    --product-ailife-bg: var(--green-0);
+    /* AIpet using blue-green mix */
+    --product-aipet-fg: var(--blue-500);
+    --product-aipet-bg: var(--blue-100);
   }
 
   .dark {

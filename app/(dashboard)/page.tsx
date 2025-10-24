@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
 import { AImaxLogo } from '@/components/ui/aimax-logo';
 import { HealthcareIcons, AImaxFeatureIcon } from '@/components/ui/aimax-icons';
+import HeroWave from '@/components/ui/dynamic-wave-canvas-background';
 import { Heart, Users, Stethoscope, ShieldCheck, Clock, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 
@@ -8,27 +8,92 @@ export default function HomePage() {
   return (
     <main>
       {/* Section 1: Hero/Main Value Proposition */}
-      <section className="h-[70vh] bg-gradient-to-br from-aimax-primary-500 to-aimax-secondary-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Dynamic Wave Background */}
+        <div className="absolute inset-0 z-0">
+          <HeroWave />
+          {/* Enhanced overlay for better text readability with green-blue waves */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/10 to-black/40"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center min-h-screen">
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full py-20">
             
             {/* Left Side - Main Content */}
-            <div className="space-y-8">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Helping with the first and the last mile of the patient!
-            </h1>
-            <p className="font-body text-lg md:text-xl text-white/90 w-full max-w-none">
-              AImax: your reliable, user-friendly, and empathetic assistant.
-            </p>
+            <div className="space-y-8 hero-content">
+              {/* AImax Logo */}
+              <div className="mb-6">
+                <AImaxLogo className="h-16 w-auto text-white" />
+              </div>
+              
+              <h1 className="font-display hero-title font-bold text-white leading-tight text-shadow-strong">
+                Helping with the first and the last mile of the patient!
+              </h1>
+              <p className="font-body text-lg md:text-xl lg:text-2xl text-white/95 w-full max-w-none text-shadow-soft">
+                AImax: your reliable, user-friendly, and empathetic assistant.
+              </p>
+              
+              {/* Call to Action */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button className="bg-white text-aimax-primary-600 px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-aimax-primary-600 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
             </div>
 
-            {/* Right Side - AImax Signet */}
-            <div className="flex items-center justify-center">
-              <svg width="320" height="320" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M33.5498 13.5498H28.4502V8.45016C28.4502 4.34309 25.1071 1 21 1C16.8929 1 13.5498 4.34309 13.5498 8.45016V13.5498H8.45016C4.34309 13.5498 1 16.8929 1 21C1 25.1071 4.34309 28.4502 8.45016 28.4502H13.5498V33.5498C13.5498 37.6569 16.8929 41 21 41C25.1071 41 28.4502 37.6569 28.4502 33.5498V28.4502H33.5498C37.6569 28.4502 41 25.1071 41 21C41 16.8929 37.6569 13.5498 33.5498 13.5498ZM8.45295 26.0969C5.63683 26.0969 3.35606 23.8133 3.35606 21C3.35606 18.1867 5.63962 15.9031 8.45295 15.9031H13.5526V26.0997H8.45295V26.0969ZM26.0997 33.547C26.0997 36.3632 23.8161 38.6439 21.0028 38.6439C18.1867 38.6439 15.9059 36.3604 15.9059 33.547V28.4474L22.5 28.4502V26.0997L15.9059 26.0969V8.45016C15.9059 5.63404 18.1895 3.35327 21.0028 3.35327C23.8189 3.35327 26.0997 5.63683 26.0997 8.45016V15.5741C24.7753 14.3305 22.9992 13.561 21.0446 13.5498H19.5V15.9031H21.0446C23.8412 15.9282 26.0997 18.2006 26.0997 21V33.5498V33.547ZM33.5498 26.0969H28.4502V21C28.4502 19.0287 27.6778 17.2359 26.4259 15.9031H33.5498C36.366 15.9031 38.6467 18.1867 38.6467 21C38.6467 23.8133 36.3632 26.0969 33.5498 26.0969Z" fill="white" stroke="white"/>
-              </svg>
+            {/* Right Side - Interactive Demo */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                {/* Interactive Demo Container */}
+                <div className="relative aspect-square bg-white/10 rounded-3xl overflow-hidden border border-white/30 backdrop-blur-md shadow-2xl">
+                  {/* Demo Content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
+                    <div className="text-center text-white">
+                      {/* AI Assistant Icon */}
+                      <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
+                        <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                      </div>
+                      
+                      {/* Demo Text */}
+                      <h3 className="font-display text-xl font-semibold mb-3">Interactive AI Demo</h3>
+                      <p className="font-body text-sm text-white/80 mb-6 leading-relaxed">
+                        Experience AImax's empathetic healthcare assistance
+                      </p>
+                      
+                      {/* Demo Button */}
+                      <button className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 border border-white/30 backdrop-blur-sm">
+                        Try Demo
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-white/40 rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-6 left-6 w-2 h-2 bg-white/30 rounded-full animate-pulse delay-1000"></div>
+                  <div className="absolute top-1/3 left-4 w-1 h-1 bg-white/50 rounded-full animate-pulse delay-500"></div>
+                </div>
+                
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl pointer-events-none"></div>
+              </div>
             </div>
 
+          </div>
+        </div>
+        
+        {/* Enhanced Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="flex flex-col items-center space-y-3 text-white/80">
+            <span className="text-sm font-body font-medium">Discover AImax</span>
+            <div className="w-8 h-12 border-2 border-white/60 rounded-full flex justify-center backdrop-blur-sm bg-white/10">
+              <div className="w-1 h-4 bg-white/80 rounded-full mt-2 animate-bounce"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -277,12 +342,6 @@ export default function HomePage() {
             Join thousands of patients, medical personnel, and doctors who trust AImax 
             for their healthcare journey. Experience the difference of truly empathetic AI.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button variant="primary" size="xl" shape="rounded" className="font-body">
-              Contact Our Team
-            </Button>
-          </div>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-aimax-primary-200 mx-auto">
             <p className="font-body text-xl text-aimax-dark font-semibold italic leading-relaxed mb-3">

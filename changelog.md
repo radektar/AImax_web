@@ -1,5 +1,16 @@
 # AImax Landing Page Changelog
 
+## [v0.4.2] - 2025-01-27
+
+### Updated - Code Formatting & Documentation
+- Careers page code formatting improved with proper file ending
+- Tech Lead job descriptions (German and English) formatting standardized
+- Minor code cleanup and consistency improvements
+
+### Technical
+- Enhanced code maintainability with consistent formatting standards
+- Improved file structure consistency across documentation files
+
 ## [v0.4.1] - 2025-10-17
 
 ### Updated - Contact Form & Hero Screen Improvements

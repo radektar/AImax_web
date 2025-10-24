@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Orbitron, Funnel_Display } from 'next/font/google';
+import { Orbitron, Funnel_Display, Space_Grotesk, DM_Sans } from 'next/font/google';
 import { getUser, getTeamForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
 import { SiteHeader } from '@/components/site-header';
@@ -28,6 +28,18 @@ const funnelSans = Funnel_Display({
   display: 'swap',
 });
 
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({ 
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+});
+
 export default function RootLayout({
   children
 }: {
@@ -36,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${orbitron.variable} ${funnelSans.variable}`}
+      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${orbitron.variable} ${funnelSans.variable} ${spaceGrotesk.variable} ${dmSans.variable}`}
     >
       <body className="min-h-[100dvh] bg-gray-50 flex flex-col">
         <SiteHeader />
