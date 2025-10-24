@@ -60,3 +60,5 @@ Neben einem attraktiven und marktüblichen Gehalt sowie Partizipation am VSOP, b
 AlmaxDOC GmbH  
 cw@aimax.care  
 +49-172-8195340
+
+

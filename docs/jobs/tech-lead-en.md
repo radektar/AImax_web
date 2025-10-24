@@ -60,3 +60,5 @@ In addition to an attractive and market-standard salary and participation in the
 AImaxDoc GmbH  
 cw@aimax.care  
 +49-172-8195340
+
+
