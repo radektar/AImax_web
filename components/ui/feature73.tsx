@@ -24,7 +24,7 @@ export const Feature73 = ({
       title: "Your 24/7 Healthcare Companion",
       description:
         "Healthguide available anytime, anywhere. Easy-to-use interface for health inquiries, symptom assessment, and severity calibration. Empathetic support that feels like talking to a caring friend, all based on German medical guidelines and trained with German GPs.",
-      image: "/hero_wireframe.png",
+      image: "/pacjencui.png",
       icon: <Heart className="h-8 w-8" />,
       colorClasses: "bg-aimax-primary-100 text-aimax-primary-500 group-hover:bg-aimax-primary-500 group-hover:text-white",
     },
@@ -33,7 +33,7 @@ export const Feature73 = ({
       title: "Streamline Administrative Tasks",
       description:
         "Support for time-consuming administrative work including patient admission, filling out questionnaires on symptoms and anamneses, and managing quality metrics and PROMs. Free up valuable time to focus on patient care.",
-      image: "/hero_wireframe.png",
+      image: "/personel.png",
       icon: <Users className="h-8 w-8" />,
       colorClasses: "bg-aimax-secondary-100 text-aimax-secondary-500 group-hover:bg-aimax-secondary-500 group-hover:text-white",
     },
@@ -42,7 +42,7 @@ export const Feature73 = ({
       title: "Enhanced Clinical Decision Support",
       description:
         "More efficient patient appointments through prior assessed anamneses. Access to digital 2nd opinions on suspected diagnoses with comprehensive cross-checking against medical guidelines and literature.",
-      image: "/hero_wireframe.png",
+      image: "/lekarze.png",
       icon: <Stethoscope className="h-8 w-8" />,
       colorClasses: "bg-aimax-primary-100 text-aimax-primary-600 group-hover:bg-aimax-primary-600 group-hover:text-white",
     },

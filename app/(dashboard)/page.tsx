@@ -1,6 +1,6 @@
 import { AImaxLogo } from '@/components/ui/aimax-logo';
 import { HealthcareIcons, AImaxFeatureIcon } from '@/components/ui/aimax-icons';
-import HeroWave from '@/components/ui/dynamic-wave-canvas-background';
+import { Hero } from '@/components/ui/hero';
 import { Feature108 } from '@/components/ui/feature108';
 import { Feature73 } from '@/components/ui/feature73';
 import { Heart, Users, Stethoscope, ShieldCheck, Clock, MessageCircle } from 'lucide-react';
@@ -10,44 +10,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Section 1: Hero/Main Value Proposition */}
-      <section className="relative h-[70vh] min-h-[600px] overflow-hidden">
-        {/* Dynamic Wave Background */}
-        <div className="absolute inset-0 z-0">
-          <HeroWave />
-          {/* Enhanced overlay for better text readability with green-blue waves */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/10 to-black/40"></div>
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center pt-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full py-8">
-            
-            {/* Left Side - Main Content */}
-            <div className="space-y-8 hero-content">
-              <h1 className="font-display hero-title font-bold text-white leading-tight">
-                Helping with the first and the last mile of the patient!
-              </h1>
-            </div>
-
-            {/* Right Side - AI Assistant Image */}
-            <div className="flex items-center justify-center lg:justify-end">
-              {/* AI Assistant Image - 420x420px */}
-              <div className="relative rounded-3xl overflow-hidden w-[420px] h-[420px]">
-                <Image 
-                  src="/assistant_1_light.png" 
-                  alt="AImax Healthcare Assistant"
-                  width={420}
-                  height={420}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
-
-          </div>
-        </div>
-        
-      </section>
+      <Hero />
 
       {/* Section 2: Partners & Customers */}
       <section id="about" className="py-12 bg-aimax-light">
