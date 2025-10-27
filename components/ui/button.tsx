@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // AImax Primary Button - Secondary Blue
+        // AImax Primary Button - Green
         primary:
-          "bg-aimax-secondary-500 text-white shadow-md hover:bg-aimax-secondary-600 active:bg-aimax-secondary-700 focus-visible:ring-aimax-secondary-500 disabled:bg-aimax-gray-300",
+          "bg-green-500 text-white shadow-md hover:bg-green-600 active:bg-green-700 focus-visible:ring-green-500 disabled:bg-aimax-gray-300",
         
-        // AImax Secondary Button - Primary Teal  
+        // AImax Secondary Button - Blue
         secondary:
-          "bg-aimax-primary-500 text-white shadow-md hover:bg-aimax-primary-600 active:bg-aimax-primary-700 focus-visible:ring-aimax-primary-500 disabled:bg-aimax-gray-300",
+          "bg-aimax-secondary-500 text-white shadow-md hover:bg-aimax-secondary-600 active:bg-aimax-secondary-700 focus-visible:ring-aimax-secondary-500 disabled:bg-aimax-gray-300",
         
         // AImax Outline Button - Primary Border
         outline:
-          "border-2 border-aimax-primary-500 bg-transparent text-aimax-primary-500 shadow-sm hover:bg-aimax-primary-50 active:bg-aimax-primary-100 focus-visible:ring-aimax-primary-500 disabled:border-aimax-gray-300 disabled:text-aimax-gray-400",
+          "border-2 border-green-500 bg-transparent text-green-600 shadow-sm hover:bg-green-50 active:bg-green-100 focus-visible:ring-green-500 disabled:border-aimax-gray-300 disabled:text-aimax-gray-400",
         
         // AImax Secondary Outline - Secondary Border
         "outline-secondary":

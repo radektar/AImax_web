@@ -1,14 +1,14 @@
-import { Hero } from '@/components/ui/hero';
+import { HeroTest } from '@/components/ui/hero-test';
 import { ValueProposition } from '@/components/ui/value-proposition';
 import { AudienceCards } from '@/components/ui/audience-cards';
 import { ContactCta } from '@/components/ui/contact-cta';
 import Image from 'next/image';
 
-export default function HomePage() {
+export default function TestHeroPage() {
   return (
     <main>
-      {/* Section 1: Hero/Main Value Proposition */}
-      <Hero />
+      {/* Section 1: Hero/Main Value Proposition - Testing green-700 background */}
+      <HeroTest backgroundColor="green-700" />
 
       {/* Section 2: Partners & Customers */}
       <section id="about" className="py-16 bg-white">
@@ -73,3 +73,4 @@ export default function HomePage() {
     </main>
   );
 }
+

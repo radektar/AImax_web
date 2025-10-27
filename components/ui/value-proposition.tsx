@@ -1,8 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Clock, MessageCircle, ShieldCheck } from "lucide-react";
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { ValueCard } from "@/components/ui/value-card";
 
 interface TabContent {
   badge: string;
@@ -20,14 +18,14 @@ interface Tab {
   content: TabContent;
 }
 
-interface Feature108Props {
+interface ValuePropositionProps {
   badge?: string;
   heading?: string;
   description?: string;
   tabs?: Tab[];
 }
 
-const Feature108 = ({
+export const ValueProposition = ({
   badge = "Why Choose AImax?",
   heading = "Our Core Values Drive Everything We Do",
   description = "Making healthcare AI that truly serves patients and providers",
@@ -75,15 +73,15 @@ const Feature108 = ({
       },
     },
   ],
-}: Feature108Props) => {
+}: ValuePropositionProps) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-4 text-center mb-16">
+        <div className="flex flex-col items-center gap-4 text-center mb-12">
           <h2 className="font-display text-3xl font-bold text-aimax-dark sm:text-4xl lg:text-5xl max-w-12xl">
             {heading}
           </h2>
-          <p className="font-body text-xl text-aimax-gray-600 leading-relaxed">
+          <p className="font-body text-lg md:text-xl text-aimax-gray-600 leading-relaxed">
             {description}
           </p>
         </div>
@@ -99,34 +97,20 @@ const Feature108 = ({
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-aimax-light/70 p-6 lg:p-16 border border-aimax-gray-200">
+          <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-aimax-light/70 p-8 lg:p-12 border border-aimax-gray-200">
             {tabs.map((tab) => (
               <TabsContent
                 key={tab.value}
                 value={tab.value}
-                className="grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10"
               >
-                <div className="flex flex-col gap-5">
-                  <Badge variant="outline" className="w-fit bg-white text-aimax-gray-600 border-aimax-gray-200">
-                    {tab.content.badge}
-                  </Badge>
-                  <h3 className="font-display text-3xl font-bold text-aimax-dark lg:text-5xl">
-                    {tab.content.title}
-                  </h3>
-                  <p className="font-body text-aimax-gray-700 lg:text-lg leading-relaxed">
-                    {tab.content.description}
-                  </p>
-                  <Button className="mt-2.5 w-fit gap-2 bg-aimax-primary-500 hover:bg-aimax-primary-600 text-white" size="lg">
-                    {tab.content.buttonText}
-                  </Button>
-                </div>
-                <div className="relative aspect-[4/3] w-full">
-                  <img
-                    src={tab.content.imageSrc}
-                    alt={tab.content.imageAlt}
-                    className="rounded-xl w-full h-full object-cover"
-                  />
-                </div>
+                <ValueCard
+                  badge={tab.content.badge}
+                  title={tab.content.title}
+                  description={tab.content.description}
+                  image={tab.content.imageSrc}
+                  imageAlt={tab.content.imageAlt}
+                  buttonText={tab.content.buttonText}
+                />
               </TabsContent>
             ))}
           </div>
@@ -135,5 +119,3 @@ const Feature108 = ({
     </section>
   );
 };
-
-export { Feature108 };
