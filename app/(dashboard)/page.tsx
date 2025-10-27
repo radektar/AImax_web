@@ -3,6 +3,7 @@ import { HealthcareIcons, AImaxFeatureIcon } from '@/components/ui/aimax-icons';
 import { Hero } from '@/components/ui/hero';
 import { Feature108 } from '@/components/ui/feature108';
 import { Feature73 } from '@/components/ui/feature73';
+import { Cta4 } from '@/components/ui/cta-4';
 import { Heart, Users, Stethoscope, ShieldCheck, Clock, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 
@@ -60,25 +61,19 @@ export default function HomePage() {
 
 
       {/* Contact/CTA Section */}
-      <section id="contact" className="py-20 bg-aimax-primary-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">         
-          <h2 className="font-display text-3xl font-bold text-aimax-dark sm:text-4xl lg:text-5xl mb-8">
-            Ready to Transform Healthcare?
-          </h2>
-          
-          <p className="font-body text-xl text-aimax-gray-600 mb-8 mx-4 leading-relaxed">
-            Join thousands of patients, medical personnel, and doctors who trust AImax 
-            for their healthcare journey. Experience the difference of truly empathetic AI.
-          </p>
-          
-          <div className="bg-white rounded-2xl p-8 border border-aimax-primary-200 mx-auto">
-            <p className="font-body text-xl text-aimax-dark font-semibold italic leading-relaxed mb-3">
-              "I can only de-activate if you say that you are satisfied with my care."
-            </p>
-            <p className="text-aimax-primary-500 text-base font-medium">— Your AImax Promise</p>
-          </div>
-        </div>
-      </section>
+      <Cta4 
+        title="Ready to Transform Healthcare?"
+        description="I can only de-activate if you say that you are satisfied with my care."
+        buttonText="Contact Us"
+        buttonUrl="/contact"
+        items={[
+          "Join thousands of patients",
+          "Medical personnel approved",
+          "Doctor recommended",
+          "Truly empathetic AI care",
+          "Complete healthcare journey support"
+        ]}
+      />
     </main>
   );
 }
