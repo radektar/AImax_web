@@ -60,13 +60,6 @@ export const AudienceCards = ({
         <div className="grid gap-6 md:grid-cols-2">
           {audiences[0] && (
             <div className="md:col-span-2 md:grid md:grid-cols-2 gap-8 overflow-clip rounded-xl border border-aimax-gray-200 bg-white">
-              <div className="md:min-h-[18rem] lg:min-h-[20rem] bg-aimax-light">
-                <img
-                  src={audiences[0].image}
-                  alt={audiences[0].title}
-                  className="aspect-[4/3] h-full w-full object-contain object-center"
-                />
-              </div>
               <div className="flex flex-col justify-center px-6 py-6 md:px-6 md:py-6 lg:px-8 lg:py-8">
                 <div className="mb-3">{audiences[0].icon}</div>
                 <h3 className="font-display mb-3 text-2xl font-bold text-aimax-dark md:text-3xl">
@@ -75,6 +68,13 @@ export const AudienceCards = ({
                 <p className="font-body text-aimax-gray-700 text-base lg:text-lg leading-relaxed">
                   {audiences[0].description}
                 </p>
+              </div>
+              <div className="md:min-h-[18rem] lg:min-h-[20rem] bg-aimax-light">
+                <img
+                  src={audiences[0].image}
+                  alt={audiences[0].title}
+                  className="h-full w-full object-cover object-right"
+                />
               </div>
             </div>
           )}
