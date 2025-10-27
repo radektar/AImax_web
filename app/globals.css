@@ -251,13 +251,28 @@
     box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 25px 25px -5px rgba(0, 0, 0, 0.1);
   }
 
-  /* Responsive Typography Adjustments */
-  @media (max-width: 640px) {
+  /* Responsive Typography Adjustments - Fluid scaling */
+  .hero-title {
+    /* Fluid font size that scales between min and max based on viewport width (reduced by 10%) */
+    font-size: clamp(1.8rem, 3.6vw + 0.9rem, 5.4rem);
+    line-height: clamp(1.05, 1.15, 1.2);
+  }
+
+  /* Adjust for short viewports (when hero is 70vh and screen is short) */
+  @media (max-height: 700px) {
     .hero-title {
-      font-size: 2.5rem;
-      line-height: 1.2;
+      font-size: clamp(1.575rem, 3.15vw + 0.675rem, 4.05rem);
     }
-    
+  }
+
+  @media (max-height: 500px) {
+    .hero-title {
+      font-size: clamp(1.35rem, 2.7vw + 0.45rem, 3.15rem);
+    }
+  }
+
+  /* Hero signet responsive sizing */
+  @media (max-width: 640px) {
     .hero-signet {
       width: 200px;
       height: 200px;
@@ -265,11 +280,6 @@
   }
 
   @media (min-width: 641px) and (max-width: 768px) {
-    .hero-title {
-      font-size: 3.5rem;
-      line-height: 1.15;
-    }
-    
     .hero-signet {
       width: 240px;
       height: 240px;
@@ -277,11 +287,6 @@
   }
 
   @media (min-width: 769px) {
-    .hero-title {
-      font-size: 4.5rem;
-      line-height: 1.1;
-    }
-    
     .hero-signet {
       width: 280px;
       height: 280px;
@@ -289,11 +294,6 @@
   }
 
   @media (min-width: 1024px) {
-    .hero-title {
-      font-size: 6rem;
-      line-height: 1.05;
-    }
-    
     .hero-signet {
       width: 320px;
       height: 320px;
